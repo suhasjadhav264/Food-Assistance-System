@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/login_bg"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@drawable/login_bg_new"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/login_bg"
+            android:text="Food Assistance App"
+            android:textColor="@color/black"
+            android:fontFamily="@font/segoe_ui_bold_italic"
+            android:textSize="25sp"
+            android:layout_marginBottom="25dp"
+            android:background="@color/white"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="5dp"
+            android:alpha=".9"
+            />
+
+        <TextView
+            android:id="@+id/login_quote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_bg"
+            android:text="@string/login_quote"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:fontFamily="@font/swiss_721_bold_italic"
+            android:textColor="@color/black"
+            android:layout_marginTop="35dp"/>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/username_card"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_quote"
+            android:layout_marginTop="35dp"
+            android:layout_marginHorizontal="17dp"
+            app:strokeColor="#707070"
+            app:strokeWidth="1dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="35dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_icon_ionic_md_person"
+                    android:layout_gravity="center"/>
+
+                <EditText
+                    android:id="@+id/editTextUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Username"
+                    android:background="@drawable/my_edit_box"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:maxLines="1"
+                    android:singleLine="true"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/password_card"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/username_card"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="17dp"
+            app:strokeColor="#707070"
+            app:strokeWidth="1dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="35dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_icon_ionic_ios_unlock"
+                    android:layout_gravity="center"/>
+
+                <EditText
+                    android:id="@+id/editTextPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Password"
+                    android:background="@drawable/my_edit_box"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:inputType="textPassword"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <TextView
+            android:id="@+id/forgot_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Forgot Password?"
+            android:textColor="#0010E3"
+            app:layout_constraintTop_toBottomOf="@+id/password_card"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="17dp"
+            android:textSize="20sp"
+            android:fontFamily="@font/segoe_ui"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/forgot_pass"
+            android:layout_marginTop="33dp"
+            android:layout_marginHorizontal="17dp"
+            android:padding="15dp"
+            android:text="Login"
+            android:textAllCaps="false"
+            app:cornerRadius="10dp"
+            android:backgroundTint="#FF7207"
+            android:textSize="20sp"
+            android:fontFamily="@font/segoe_ui"
+            />
+
+        <ProgressBar
+            android:id="@+id/Progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="gone"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
