@@ -1,1 +1,2 @@
-# Food-Assistance-System
+# Food-Assistance-System 
+Private charitable food assistance system
